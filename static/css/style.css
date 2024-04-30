@@ -13,8 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   /* background-color: #f44040; */
-    background-image: url('/OIP.jpg'); 
+   /* background-color: #f44040; /* Change background color */
+    background-image: url('/static/images/wp1891627.jpg'); 
     background-size: cover; 
     background-position: center;
     column-gap: 30px; 
@@ -27,6 +27,10 @@
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
+    background-image: url('/static/images/wp1891627.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    column-gap: 30px;
 }
 .form.signup{
     opacity: 0;
@@ -88,6 +92,7 @@ form{
     background-color: #0171d3;
     transition: all 0.3s ease;
     cursor: pointer;
+    
 }
 .field button:hover{
     background-color: #016dcb;
@@ -173,3 +178,43 @@ a.google span{
     }
     
 }
+button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: "Source Code Pro";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 2px 2px 22px;
+    border-radius: 4px;
+    z-index: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Added transition for smooth rotation */
+}
+
+button:active {
+    animation: wave 0.4s ease;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+button:focus {
+    outline-color: transparent;
+    box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+
