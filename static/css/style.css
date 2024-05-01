@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
    /* background-color: #f44040; /* Change background color */
-    background-image: url('/static/images/wp1891627.jpg'); 
+    background-image: url('/static/images/xyz-5.jpg'); 
     background-size: cover; 
     background-position: center;
     column-gap: 30px; 
@@ -27,7 +27,7 @@
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
-    background-image: url('/static/images/wp1891627.jpg'); 
+    background-image: url('/static/images/log-pag-1.png'); 
     background-size: cover; 
     background-position: center;
     column-gap: 30px;
@@ -68,6 +68,7 @@ form{
     font-size: 16px;
     font-weight: 400;
     border-radius: 6px;
+    box-shadow: 2px 2px 10px #1f1f1f;
 }
 .field input{
     outline: none;
@@ -87,16 +88,91 @@ form{
     cursor: pointer;
     padding: 5px;
 }
+/*
 .field button{
     color: #fff;
     background-color: #0171d3;
     transition: all 0.3s ease;
+    cursor: pointer;   
+
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: #5E35B1;
+    height: 50px;
+    width: 100%;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 20px;
     cursor: pointer;
-    
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
 }
+.field button::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  .field button:hover::before {
+    transform: scaleX(1);
+  }
+  .field button:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
+
 .field button:hover{
-    background-color: #016dcb;
+    background-color: #1E88E5;
 }
+*/
+
+
+.field button {
+    background-color: var(--bgOrange);
+    width: fit-content;
+    height: 50px;
+    width: 100%;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
+  .field button::before {
+    content: "";
+    position: absolute;
+    background-color: #686de0;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  .field button:hover::before {
+    transform: scaleX(1);
+  }
+  .field button:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
 .form-link{
     text-align: center;
     margin-top: 10px;
@@ -112,11 +188,12 @@ form{
     text-decoration: none;
 }
 .form-content a:hover{
+    color: #B0BEC5;
     text-decoration: underline;
 }
 .line{
     position: relative;
-    height: 1px;
+    height: 2px;
     width: 100%;
     margin: 36px 0;
     background-color: #d4d4d4;
@@ -126,6 +203,7 @@ form{
     position: absolute;
     top: 50%;
     left: 50%;
+    border-radius: 7px;
     transform: translate(-50%, -50%);
     background-color: #FFF;
     color: #8b8b8b;
@@ -136,9 +214,17 @@ form{
     align-items: center;
     justify-content: center;
 }
+.media-options a:hover{
+    color: #8b8b8b;
+
+}
 a.facebook{
     color: #fff;
     background-color: #4267b2;
+}
+
+a.facebook:hover{
+    background-color: #B0BEC5;
 }
 a.facebook .facebook-icon{
     height: 28px;
@@ -166,12 +252,18 @@ img.google-img{
 a.google{
     border: 1px solid #CACACA;
 }
+a.google:hover{
+    background-color:  #B0BEC5;
+}
 a.google span{
     font-weight: 500;
     opacity: 0.6;
     color: #232836;
 }
+a.google span:hover{
 
+    color: white;
+}
 @media screen and (max-width: 400px) {
     .form{
         padding: 20px 10px;
